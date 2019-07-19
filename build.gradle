@@ -38,13 +38,13 @@ dependencies {
 
     compileOnly "io.micronaut:micronaut-inject-groovy"
     runtime "ch.qos.logback:logback-classic:1.2.3"
+
     testAnnotationProcessor "io.micronaut:micronaut-inject-java"
     testCompile "org.junit.jupiter:junit-jupiter-api"
     testCompile "io.micronaut.test:micronaut-test-junit5"
     testCompile("org.spockframework:spock-core") {
         exclude group: "org.codehaus.groovy", module: "groovy-all"
     }
-
     testCompile "io.micronaut:micronaut-inject-groovy"
     testCompile "io.micronaut.test:micronaut-test-spock"
     testRuntime "org.junit.jupiter:junit-jupiter-engine"

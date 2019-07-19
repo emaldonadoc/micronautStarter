@@ -10,7 +10,6 @@ import javax.inject.Inject
 import javax.persistence.EntityManager
 import javax.persistence.TypedQuery
 
-
 class BalanceRepositoryImpl implements BalanceRepository {
 
   @Inject

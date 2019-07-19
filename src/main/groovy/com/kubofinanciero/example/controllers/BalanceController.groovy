@@ -1,7 +1,7 @@
 package com.kubofinanciero.example.controllers
 
 import com.kubofinanciero.example.entities.SavingAccount
-import com.kubofinanciero.example.repositories.BalanceRepository
+import com.kubofinanciero.example.services.BalanceService
 import io.micronaut.http.MediaType
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
@@ -13,11 +13,11 @@ import javax.inject.Inject
 class BalanceController {
 
   @Inject
-  BalanceRepository balanceRepository
+  BalanceService balanceService
 
   @Get('/{clientId}')
   @Produces(MediaType.APPLICATION_JSON)
   List<SavingAccount> fetchSavingAccount(Long clientId) {
-    balanceRepository.findByClientId(clientId)
+    balanceService.findBalanceByClientId(clientId)
   }
 }
