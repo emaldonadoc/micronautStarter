@@ -1,0 +1,24 @@
+micronaut:
+  application:
+    name: micronautStarter
+  server:
+    port: 11090
+
+datasources:
+  default:
+    jdbcUrl: jdbc:mysql://127.0.0.1:3306/test?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull&serverTimezone=America/Mexico_City
+    username: root
+    password: password
+    driverClassName: com.mysql.jdbc.Driver
+    maximumPoolSize: 15
+    minimumIdle: 5
+
+jpa:
+  default:
+    packages-to-scan:
+      - "com.kubofinanciero.example.entities"
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true

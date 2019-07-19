@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: com.kubofinanciero.example
+---
+testFramework: spock
+sourceLanguage: groovy
