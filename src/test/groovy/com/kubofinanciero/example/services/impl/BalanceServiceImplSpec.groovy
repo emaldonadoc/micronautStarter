@@ -24,6 +24,7 @@ class BalanceServiceImplSpec extends Specification {
 
     then:
     result
+    result instanceof List
     1 * balanceRepository.findByClientId(_ as Long) >> [new SavingAccount()]
   }
 

@@ -15,7 +15,6 @@ class BalanceServiceImpl implements BalanceService {
 
   @Override
   List<SavingAccount> findBalanceByClientId(Long clientId) {
-    log.info "BALANCE SERVICE !!!"
     balanceRepository.findByClientId(clientId)
   }
 }
