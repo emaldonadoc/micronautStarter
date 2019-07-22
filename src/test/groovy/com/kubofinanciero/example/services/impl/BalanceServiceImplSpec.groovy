@@ -2,12 +2,13 @@ package com.kubofinanciero.example.services.impl
 
 import com.kubofinanciero.example.entities.SavingAccount
 import com.kubofinanciero.example.repositories.BalanceRepository
+import com.kubofinanciero.example.services.BalanceService
 import spock.lang.Specification
 
 class BalanceServiceImplSpec extends Specification {
 
-  BalanceServiceImpl balanceServiceImpl
-  BalanceRepository balanceRepository= Mock()
+  BalanceService balanceServiceImpl
+  BalanceRepository balanceRepository = Mock()
 
   def setup() {
     balanceServiceImpl = new BalanceServiceImpl()
